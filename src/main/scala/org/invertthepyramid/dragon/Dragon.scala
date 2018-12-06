@@ -2,12 +2,15 @@ package org.invertthepyramid.dragon
 import org.invertthepyramid.game.Hitpoints
 import org.invertthepyramid.optics.Lens
 
-case class Dragon( head: Head)
+case class Dragon( body: Body, head: Head)
 object Dragon {
-  def chestL: Lens[Dragon, Chest] = ???
+  def bodyL: Lens[Dragon, Body] = Lens(_.body, (d, b) => d.copy(body=b))
   def stomachContentsL: Lens[Dragon, List[AnyRef]] = ???
 }
 case class Body(chest: Chest, leg: List[Leg])
+object Body {
+  def chestL: Lens[Chest, Stomach] = ???
+}
 case class Chest(stomach: Stomach, lungs: Lungs, heart: Heart, hitpoints: Hitpoints)
 object Chest {
   def stomachL: Lens[Chest, Stomach] = ???

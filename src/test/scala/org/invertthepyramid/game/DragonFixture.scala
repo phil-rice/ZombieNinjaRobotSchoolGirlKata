@@ -8,10 +8,12 @@ import scala.concurrent.duration.Duration
 
 trait DragonFixture {
   implicit def toHitpoints: Int => Hitpoints = Hitpoints.apply
-  val dragon = Dragon(Chest(Stomach(List()), Lungs(10, 10), Heart(10, 20, 30), 10), List(Leg(Claw(10, 20, 30), 1), Leg(Claw(10, 20, 30), 2)), Head(List(Tooth(1)), 10))
-  val dragonHitInChest = Dragon(Chest(Stomach(List()), Lungs(10, 10), Heart(10, 20, 30), -10), List(Leg(Claw(10, 20, 30), 1), Leg(Claw(10, 20, 30), 2)), Head(List(Tooth(1)), 10))
-  val dragonEatenItem1 = Dragon(Chest(Stomach(List("item1")), Lungs(10, 10), Heart(10, 20, 30), 10), List(Leg(Claw(10, 20, 30), 1), Leg(Claw(10, 20, 30), 2)), Head(List(Tooth(1)), 10))
-  val dragonEatenItem1AndItem2 = Dragon(Chest(Stomach(List("item1", "item2")), Lungs(10, 10), Heart(10, 20, 30), 10), List(Leg(Claw(10, 20, 30), 1), Leg(Claw(10, 20, 30), 2)), Head(List(Tooth(1)), 10))
+
+
+  val dragon = Dragon(Body(Chest(Stomach(List()), Lungs(10, 10), Heart(10, 20, 30), 10), List(Leg(Claw(10, 20, 30), 1), Leg(Claw(10, 20, 30), 2))), Head(List(Tooth(1)), 10))
+  val dragonHitInChest = Dragon(Body(Chest(Stomach(List()), Lungs(10, 10), Heart(10, 20, 30), -10), List(Leg(Claw(10, 20, 30), 1), Leg(Claw(10, 20, 30), 2))), Head(List(Tooth(1)), 10))
+  val dragonEatenItem1 = Dragon(Body(Chest(Stomach(List("item1")), Lungs(10, 10), Heart(10, 20, 30), 10), List(Leg(Claw(10, 20, 30), 1), Leg(Claw(10, 20, 30), 2))), Head(List(Tooth(1)), 10))
+  val dragonEatenItem1AndItem2 = Dragon(Body(Chest(Stomach(List("item1", "item2")), Lungs(10, 10), Heart(10, 20, 30), 10), List(Leg(Claw(10, 20, 30), 1), Leg(Claw(10, 20, 30), 2))), Head(List(Tooth(1)), 10))
   val felicity = ZombieNinjaRobotSchoolGirl("Felicity", address = Address("4 Prince Drive", "suburbia", "mega city 1", "1133AX"),
     inventory = List(DiscombobulatingSword(100, 20, 3)),
     arms = (Arm(List(BuiltInMinigun(10000)), 20), Arm(List(), 300)), legs = (ZLeg(List(JumpingJacks(10)), 20), ZLeg(List(JumpingJacks(10)), 40)),

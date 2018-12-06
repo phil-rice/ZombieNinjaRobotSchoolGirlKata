@@ -4,9 +4,9 @@ import org.invertthepyramid.players.ZombieNinjaRobotSchoolGirl
 
 object Game {
 
-  def eat(dragon: Dragon, thing: AnyRef): Dragon = Dragon.stomachContentsL.transform(dragon, old => old :+ thing)
-  def regurgitate(dragon: Dragon, thing: AnyRef): Dragon = Dragon.stomachContentsL.transform(dragon, old => old.filterNot(_ == thing))
-  def foreachStomachItem(dragon: Dragon, fn: AnyRef => Unit) = Dragon.stomachContentsL.get(dragon).foreach(fn)
+  def eat(dragon: Dragon, thing: AnyRef): Dragon = ???
+  def regurgitate(dragon: Dragon, thing: AnyRef): Dragon = ???
+  def foreachStomachItem(dragon: Dragon, fn: AnyRef => Unit) = ???
 
 
   //reduce the dragon's chest hitpoints and add one to the number of times the sword is used

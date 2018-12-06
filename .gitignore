@@ -1,0 +1,16 @@
+*.class
+*/target/*
+.idea/
+*/bin/*
+target/
+report/
+*/neo4j/*
+*.zip
+*.jar
+.cache
+*.swp
+*.cache-tests
+*.cache-main
+.classpath
+.project
+*/.settings/

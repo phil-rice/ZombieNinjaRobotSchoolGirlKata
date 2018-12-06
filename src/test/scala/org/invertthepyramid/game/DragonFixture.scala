@@ -50,10 +50,11 @@ class GameSpec extends FlatSpec with Matchers with DragonFixture {
     iterate(dragonEatenItem1AndItem2) shouldBe List("item1", "item2")
   }
 
-  behavior of "Attack"
-
-  it should "reduce chest hitpoints and add one to the discombobulating sword usage" in {
-    Game.attackDragonInChestWithDiscombobulatingSwordHeldInFirstArm(dragon, felicity) shouldBe(dragonHitInChest, felicityHitsFourTimes)
-  }
+  //for those that finish early
+  //  behavior of "Attack"
+  //
+  //  it should "reduce chest hitpoints and add one to the discombobulating sword usage" in {
+  //    Game.attackDragonInChestWithDiscombobulatingSwordHeldInFirstArm(dragon, felicity) shouldBe(dragonHitInChest, felicityHitsFourTimes)
+  //  }
 
 }

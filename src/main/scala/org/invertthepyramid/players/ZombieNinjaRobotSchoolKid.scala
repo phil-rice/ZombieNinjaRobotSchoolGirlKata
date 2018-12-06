@@ -4,7 +4,7 @@ import org.invertthepyramid.game.Hitpoints
 
 import scala.concurrent.duration.Duration
 
-case class ZombieNinjaRobotSchoolGirl(name: String, address: Address, health: Health, inventory: List[Item], arms: (Arm, Arm), legs: (Leg, Leg), appetite: Int, brain: Brain)
+case class ZombieNinjaRobotSchoolKid(name: String, address: Address, health: Health, inventory: List[Item], arms: (Arm, Arm), legs: (Leg, Leg), appetite: Int, brain: Brain)
 case class Address(line1: String, line2: String, city: String, postcode: String)
 case class Health(hitpoint: Hitpoints, vitality: Vitality, timeSinceLastAteBrain: Duration)
 

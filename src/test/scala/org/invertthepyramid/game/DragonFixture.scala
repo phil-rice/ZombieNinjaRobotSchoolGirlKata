@@ -1,7 +1,7 @@
 package org.invertthepyramid.game
 
 import org.invertthepyramid.dragon._
-import org.invertthepyramid.players.{Address, Arm, Brain, BuiltInMinigun, DiscombobulatingSword, Health, JumpingJacks, Vitality, ZombieNinjaRobotSchoolGirl, Leg => ZLeg}
+import org.invertthepyramid.players.{Address, Arm, Brain, BuiltInMinigun, DiscombobulatingSword, Health, JumpingJacks, Vitality, ZombieNinjaRobotSchoolKid, Leg => ZLeg}
 import org.scalatest.{FlatSpec, Matchers}
 
 import scala.concurrent.duration.Duration
@@ -12,12 +12,12 @@ trait DragonFixture {
   val dragonHitInChest = Dragon(Chest(Stomach(List()), Lungs(10, 10), Heart(10, 20, 30), -10), List(Leg(Claw(10, 20, 30), 1), Leg(Claw(10, 20, 30), 2)), Head(List(Tooth(1)), 10))
   val dragonEatenItem1 = Dragon(Chest(Stomach(List("item1")), Lungs(10, 10), Heart(10, 20, 30), 10), List(Leg(Claw(10, 20, 30), 1), Leg(Claw(10, 20, 30), 2)), Head(List(Tooth(1)), 10))
   val dragonEatenItem1AndItem2 = Dragon(Chest(Stomach(List("item1", "item2")), Lungs(10, 10), Heart(10, 20, 30), 10), List(Leg(Claw(10, 20, 30), 1), Leg(Claw(10, 20, 30), 2)), Head(List(Tooth(1)), 10))
-  val felicity = ZombieNinjaRobotSchoolGirl("Felicity", address = Address("4 Prince Drive", "suburbia", "mega city 1", "1133AX"),
+  val felicity = ZombieNinjaRobotSchoolKid("Felicity", address = Address("4 Prince Drive", "suburbia", "mega city 1", "1133AX"),
     inventory = List(DiscombobulatingSword(100, 20, 3)),
     arms = (Arm(List(BuiltInMinigun(10000)), 20), Arm(List(), 300)), legs = (ZLeg(List(JumpingJacks(10)), 20), ZLeg(List(JumpingJacks(10)), 40)),
     appetite = 10, health = Health(10, Vitality(10), Duration.fromNanos(1000)), brain = Brain(100, 100))
 
-  val felicityHitsFourTimes = ZombieNinjaRobotSchoolGirl("Felicity", address = Address("4 Prince Drive", "suburbia", "mega city 1", "1133AX"),
+  val felicityHitsFourTimes = ZombieNinjaRobotSchoolKid("Felicity", address = Address("4 Prince Drive", "suburbia", "mega city 1", "1133AX"),
     inventory = List(DiscombobulatingSword(100, 20, 4)),
     arms = (Arm(List(BuiltInMinigun(10000)), 20), Arm(List(), 300)), legs = (ZLeg(List(JumpingJacks(10)), 20), ZLeg(List(JumpingJacks(10)), 40)),
     appetite = 10, health = Health(10, Vitality(10), Duration.fromNanos(1000)), brain = Brain(100, 100))
